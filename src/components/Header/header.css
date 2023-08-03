@@ -1,0 +1,115 @@
+/* font links */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.header{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+}
+
+.header::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.267);
+    position: absolute;
+}
+
+.firstHeader{
+    width: 50%;
+    height: 100%;
+    background-image: url(../../assets/firstHeader.png);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: flex-end;
+    padding-bottom: 4%;
+    gap: 25px;
+    padding-left: 4%;
+    animation: .8s backCome forwards;
+}
+
+.header-text-1{
+    font-size: clamp(40px,5vw,60px);
+    color: white;
+    position: relative;
+    z-index: 55;
+    transform: scale(0);
+    animation: .5s backCome 1s forwards;
+}
+
+.header-text-2{
+    font-size: clamp(16px,1vw,18px);
+    color: white;
+    position: relative;
+    z-index: 55;
+    transform: scale(0);
+    animation: .5s backCome 1.2s forwards;
+}
+
+.header-btn{
+    width: clamp(250px, 23vw,260px);
+    height: 40px;
+    border: 1px solid white;
+    background: none;
+    position: relative;
+    z-index: 55;
+    color: white;
+    text-align: left;
+    padding-left: 5px;
+    cursor: pointer;
+    transform: scale(0);
+    animation: .5s backCome 1.4s forwards;
+}
+
+.secondHeader{
+    width: 50%;
+    height: 100%;
+    background-image: url(../../assets/secondHeader.png);
+    background-size: cover;
+    background-position: center;
+    animation: .8s backCome forwards;
+}
+
+@keyframes backCome{
+    from{
+        transform: scale(0);
+    }
+    to{
+        transform: scale(1.0);
+    }
+}
+
+
+@media screen and (max-width: 750px){
+    .secondHeader{
+        display: none;
+    }
+    .firstHeader{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        padding: 0;
+        text-align: center;
+    }
+
+    .header-btn{
+        text-align: center;
+        width: clamp(280px, 23vw,80%);
+    }
+
+    .header-text-1{
+        font-size: clamp(40px,8vw,80px);
+    }
+    
+    .header-text-2{
+        font-size: clamp(14px,1vw,18px);
+    }
+}

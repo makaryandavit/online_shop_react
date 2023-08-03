@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.sec6{
+    width: 100%;
+    height: auto;
+    padding: 50px 0;
+    margin: 20px 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.sec6-title{
+    font-size: clamp(30px,3vw,50px);
+}
+
+.items{
+    max-width: 100%;
+    height: 450px;
+    display: flex;
+    align-items: center;
+    overflow: auto;
+    gap: 10px;
+    padding-left: 10px;
+    scroll-snap-type: x mandatory;
+}
+
+.items::-webkit-scrollbar{
+    display: none;
+}
+
+.item{
+    min-width: 300px;
+    height: 400px;
+    scroll-snap-align: end;
+}
+
+.itemImg{
+    width: 100%;
+    height: 80%;
+}
+
+.clothImg{
+    width: 100%;
+    height: 100%;
+}
+
+.itemInfo{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    padding-left: 10px;
+}
+
+.sec6-controls{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 25px;
+}
+
+.btns{
+    width: 200px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    display: none;
+}
+
+.btns img{
+    cursor: pointer;
+}
+
+@media screen and (min-width: 770px){
+    .btns{
+        display: flex;
+    }
+}
